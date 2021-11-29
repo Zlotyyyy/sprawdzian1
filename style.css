@@ -1,0 +1,195 @@
+* {
+    margin:0;
+    padding:0;
+    transition: 0.2s ease-in-out;
+}
+
+html, body {
+    max-width:100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:white;
+    font-family:lato;
+    background-image: linear-gradient(-90deg,#121233,#121212,#121233);
+    font-size:2em;
+}
+
+table {
+    opacity:100%;
+    height:90%;
+    overflow: visible;
+}
+
+td {
+    text-align:center;
+    padding:5px;
+    text-shadow: currentColor 0 0 0.2em;
+    cursor:default;
+    user-select: none;
+}
+
+td:not(.bezkropki)::after {
+    width:0px;
+    height:1px;
+    background-image: linear-gradient(90deg, transparent, currentColor, transparent);
+    content:"";
+    display:flex;
+    margin:auto;
+    transition: 0.2s ease-in-out;
+    transform: perspective(1em) rotateX(40deg);
+    filter:blur(10px);
+    position:absolute;
+    left:0;
+    right:0;
+}
+
+.sierpien {
+    background-image: url(sierpien.jpg);
+    background-size: 100%;
+    background-position:4px -30px;
+    background-clip:text;
+    -moz-background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size:3em;;
+}
+
+.sierpien p {
+    font-size:20px;
+    display:absolute;
+    position:relative;
+    margin-bottom:-2.4em;
+    margin-left:-3.8em;
+}
+
+img {
+    width:60%;
+}
+
+.red {
+    color:red;
+}
+
+.zdj {
+    border-radius:30px;
+}
+
+.dni {
+    color: #007FFF;
+}
+
+td:not(.zdj, .sierpien):hover {
+    scale:1.3;
+    color:orangered
+}
+
+td:not(.bezkropki):hover::after {
+    width: 40%;
+    height:20px;
+    /* filter: blur(5px); */
+}
+
+@media only screen and (max-height:600px) {
+    td {
+        font-size:1rem;
+    }
+}
+
+@media only screen and (max-height:38000px) {
+    td {
+        padding:0px;
+    }
+}
+
+@media only screen and (min-width:1300px) and (min-height:600px) {
+    body {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        color:white;
+        font-family:lato;
+        background-image: linear-gradient(-90deg,#121233,#121212,#121233);
+        font-size:2em;
+    }
+
+    table {
+        opacity:100%;
+        width:70%;
+        height:90%;
+        overflow: visible;
+    }
+
+    td {
+        text-align:center;
+        padding:10px;
+        text-shadow: currentColor 0 0 0.2em;
+        cursor:default;
+        user-select: none;
+    }
+
+    td:not(.bezkropki)::after {
+        width:0px;
+        height:1px;
+        background-image: linear-gradient(90deg, transparent, currentColor, transparent);
+        content:"";
+        display:flex;
+        margin:auto;
+        transition: 0.2s ease-in-out;
+        transform: perspective(1em) rotateX(40deg);
+        filter:blur(10px);
+        position:absolute;
+        left:0;
+        right:0;
+    }
+
+    .sierpien {
+        background-image: url(sierpien.jpg);
+        background-size: 30%;
+        background-position:center;
+        background-clip:text;
+        color:transparent;
+        font-size:3em;;
+    }
+
+    .sierpien p {
+        font-size:20px;
+        display:absolute;
+        position:relative;
+        margin-bottom:-2.4em;
+        margin-left:-4em;
+    }
+
+    img {
+        width:40%;
+    }
+
+    .red {
+        color:red;
+    }
+
+    .zdj {
+        border-radius:30px;
+    }
+
+    .dni {
+        color: #007FFF;
+    }
+
+    td:not(.zdj, .sierpien):hover {
+        scale:1.3;
+        color:orangered
+    }
+
+    td:not(.bezkropki):hover::after {
+        width: 40%;
+        height:20px;
+        /* filter: blur(5px); */
+    }
+}
